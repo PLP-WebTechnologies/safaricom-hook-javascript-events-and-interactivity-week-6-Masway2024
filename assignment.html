@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Elements and Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Button to toggle background color -->
+    <button id="toggle-bg-btn">Toggle Background Color</button>
+
+    <!-- Slider to adjust paragraph text size -->
+    <label for="text-size-slider">Adjust Text Size: </label>
+    <input type="range" id="text-size-slider" min="10" max="50" value="16" step="1">
+    <p id="dynamic-text">This text will change size dynamically as you move the slider.</p>
+
+    <!-- Modal -->
+    <button id="show-modal-btn">Open Modal</button>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal-btn" class="close-btn">&times;</span>
+            <h2>Welcome to the Modal!</h2>
+            <p>Click the close button to close the modal.</p>
+        </div>
+    </div>
+
+    <!-- Form with Validation -->
+    <form id="user-form">
+        <label for="name">Name (min 3 characters): </label>
+        <input type="text" id="name" name="name" required minlength="3">
+        <br>
+        <label for="email">Email: </label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="password">Password (min 8 characters, 1 uppercase, 1 number): </label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <button type="submit">Submit</button>
+        <div id="error-message"></div>
+    </form>
+
+    <!-- Dropdown menu -->
+    <label for="dropdown">Choose an option: </label>
+    <select id="dropdown">
+        <option value="default">Select...</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+    </select>
+    <div id="dropdown-message"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
